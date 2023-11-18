@@ -45,3 +45,56 @@
   - type: Sprite
     sprite: DeltaV/Objects/Fun/Toys/zerotoy.rsi
     state: icon
+
+
+- type: entity
+  parent: BaseItem
+  id: FoghornCushion
+  name: comically loud whoopie cushion
+  description: A practical joke device involving boatulence humour.
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/whoopie.rsi
+    state: icon
+    quickEquip: false
+  - type: ItemCooldown
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/DeltaV/Items/Toys/foghorn.ogg
+  - type: UseDelay
+    delay: 2.3
+  - type: Slippery
+    paralyzeTime: 0
+    slipSound:
+      path: /Audio/DeltaV/Items/Toys/foghorn.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/DeltaV/Items/Toys/foghorn.ogg
+    damage:
+      types:
+        Blunt: 0
+  - type: StepTrigger
+    intersectRatio: 0.2
+    requiredTriggeredSpeed: 1
+  - type: TriggerOnStepTrigger
+  - type: Appearance
+  - type: CollisionWake
+    enabled: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+        - SlipLayer
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        density: 30
+        mask:
+        - ItemMask
