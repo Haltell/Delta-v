@@ -2,7 +2,12 @@
 
 /Content.*/SimpleStation14/ @DEATHB4DEFEAT
 
+<<<<<<< HEAD
 /Resources/*.yml @Colin-Tel
+=======
+/Resources/*/DeltaV/ @DebugOk
+/Resources/*/Nyanotrasen/ @DebugOk
+>>>>>>> 9d30cf18190eb772526838960f98748943292008
 /Resources/*/SimpleStation14/ @DEATHB4DEFEAT
 /Resources/Maps/ @IamVelcroboy
 /Resources/Prototypes/Maps/ @IamVelcroboy
